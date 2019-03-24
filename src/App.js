@@ -1,28 +1,25 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import Calculette from './calculette/Calculette';
+import styled from 'styled-components';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+const TitleCalc = styled.p`
+  font-color: #282828;
+  font-size : 80px;
+  font-weight: 800
+  margin: 30px;
+
+`
+
+const App = () => {
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '100px'}}>
+          <TitleCalc>Belhoulatrice</TitleCalc>
+          <Calculette />
+    </div>
+  );
 }
 
 export default App;
