@@ -8,23 +8,17 @@ const FunctionButton = (props) => {
         switch (operation) {
             case "+":
                 return [num2 + num1, props.text];
-                break;
             case "-":
                 return [num2 - num1, props.text];
-                break;
             case ":":
                 return [num2/num1, props.text];
-                break;
             case "x":
                 return [num2 * num1, props.text];
-                break;
             case "=":
                 return [num1, props.text];
-                break;
         
             default:
                 return [num1, props.text];
-                break;
         }
     }
 

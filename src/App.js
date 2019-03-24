@@ -1,22 +1,17 @@
-import React, {useState} from 'react';
-import './App.css';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Calculette from './calculette/Calculette';
 import styled from 'styled-components';
-
-const TitleCalc = styled.p`
-  font-color: #282828;
-  font-size : 80px;
-  font-weight: 800
-  margin: 30px;
-
-`
+import {Helmet} from 'react-helmet';
 
 const App = () => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '100px'}}>
-          <TitleCalc>Belhoulatrice</TitleCalc>
+          <Helmet>
+            <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+            <title>Calculator</title>
+          </Helmet>
           <Calculette />
     </div>
   );

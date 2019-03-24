@@ -21,7 +21,7 @@ export default class Calculette extends React.Component{
     }
     
     changeShower = (newContent) => {
-        if(this.state.operation == "=") {
+        if(this.state.operation === "=") {
             this.setState({operation: "=", newOperation: 0, number: 0});
         }
         this.setState({
@@ -36,9 +36,9 @@ export default class Calculette extends React.Component{
             this.state.oldNumber, this.state.operation);
 
         console.log("Number : " + this.state.number);
-        if(newOperation == "C") {
+        if(newOperation === "C") {
             this.setState({operation: "", newOperation: 0, number: 0});
-        } else if(newOperation == "=") {
+        } else if(newOperation === "=") {
             this.setState({operation: "", oldNumber: 0, number: newNumber});
         } else {
             this.setState({operation: newOperation, oldNumber: newNumber, number: 0});
